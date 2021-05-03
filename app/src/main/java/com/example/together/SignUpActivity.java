@@ -1,5 +1,6 @@
 package com.example.together;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -37,8 +38,9 @@ public class SignUpActivity extends AppCompatActivity {
         @Override
         public void onClick(View v){
             switch(v.getId()){
-                case R.id.회원가입버튼:
-                    createUser();
+                case R.id.일반회원가입버튼:
+                    createAuthUser();
+                    //startLoginActivity();
                     break;
                 case R.id.GPS찾기버튼:
                     break;
@@ -56,7 +58,7 @@ public class SignUpActivity extends AppCompatActivity {
         }
     }
 
-    private void createUser() {
+    private void createAuthUser() {
         String email = ((EditText)findViewById(R.id.이메일에딧텍스트)).getText().toString();
         String password = ((EditText)findViewById(R.id.비번에딧텍스트)).getText().toString();
 
@@ -77,6 +79,12 @@ public class SignUpActivity extends AppCompatActivity {
                         }
                     }
                 });
+    }
+
+    private void startLoginActivity() {
+        this.
+        Intent intent = new Intent(this.LoginActivity.class);
+        startActivity(intent);
     }
 
 }
