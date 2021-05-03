@@ -23,26 +23,28 @@ public class SignUpActivity extends AppCompatActivity {
 
 
     View.OnClickListener onClickListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v){
-            switch(v.getId()){
-                case R.id.회원가입버튼:
-                    createUser();
-                    break;
-                case R.id.GPS찾기버튼:
-                    break;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mAuth = FirebaseAuth.getInstance();
+
+        setContentView(R.layout.회원가입페이지이름);// UI view
+        findViewById(R.id.회원가입버튼).setOnClickListener(onClickListener);
+    }
+
+    @Override
+    public void onClick(View v){
+        switch(v.getId()){
+            case R.id.회원가입버튼:
+                createUser();
+                break;
+            case R.id.GPS찾기버튼:
+                break;
             }
         }
     };
-
-    @Override
-    protected void onCreate(Bundle savedisntanceState) {
-        super.onCreate(savedisntanceState);
-        mAuth = FirebaseAuth.getInstance();
-
-        setContentView(R.layout.페이지이름);// UI view
-        findViewById(R.id.회원가입버튼);
-    }
 
     @Override
     public void onStart() {
@@ -76,5 +78,4 @@ public class SignUpActivity extends AppCompatActivity {
                     }
                 });
     }
-
 }
