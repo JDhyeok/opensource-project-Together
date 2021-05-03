@@ -22,7 +22,6 @@ public class SignUpActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
 
 
-    View.OnClickListener onClickListener = new View.OnClickListener() {
 
 
     @Override
@@ -34,14 +33,15 @@ public class SignUpActivity extends AppCompatActivity {
         findViewById(R.id.회원가입버튼).setOnClickListener(onClickListener);
     }
 
-    @Override
-    public void onClick(View v){
-        switch(v.getId()){
-            case R.id.회원가입버튼:
-                createUser();
-                break;
-            case R.id.GPS찾기버튼:
-                break;
+    View.OnClickListener onClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v){
+            switch(v.getId()){
+                case R.id.회원가입버튼:
+                    createUser();
+                    break;
+                case R.id.GPS찾기버튼:
+                    break;
             }
         }
     };
@@ -78,4 +78,5 @@ public class SignUpActivity extends AppCompatActivity {
                     }
                 });
     }
+
 }
