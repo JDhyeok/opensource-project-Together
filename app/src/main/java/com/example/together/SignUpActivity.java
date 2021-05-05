@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,26 +24,25 @@ public class SignUpActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mAuth = FirebaseAuth.getInstance();
 
-        setContentView(R.layout.회원가입페이지이름);// UI view
-        findViewById(R.id.회원가입버튼).setOnClickListener(onClickListener);
+        setContentView(R.layout.activity_signup);// UI view
+        findViewById(R.id.regBtn).setOnClickListener(onClickListener);
     }
 
     View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v){
             switch(v.getId()){
-                case R.id.일반회원가입버튼:
+                case R.id.regBtn:
+                    Log.d(TAG,"pressed button");
                     createAuthUser();
                     //startLoginActivity();
                     break;
-                case R.id.GPS찾기버튼:
+                case R.id.gpsBtn:
                     break;
             }
         }
@@ -59,9 +59,8 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     private void createAuthUser() {
-        String email = ((EditText)findViewById(R.id.이메일에딧텍스트)).getText().toString();
-        String password = ((EditText)findViewById(R.id.비번에딧텍스트)).getText().toString();
-
+        String email = ((EditText)findViewById(R.id.userID)).getText().toString();
+        String password = ((EditText)findViewById(R.id.userPW)).getText().toString();
 
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -71,20 +70,20 @@ public class SignUpActivity extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "createUserWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                           // updateUI(user); // 성공 UI
+                            Toast.makeText(getApplicationContext(),"회원가입 완료",Toast.LENGTH_LONG).show();
+                            // updateUI(user); // 성공 UI
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "createUserWithEmail:failure", task.getException());
+                            Toast.makeText(getApplicationContext(),"실패",Toast.LENGTH_LONG).show();
                             //updateUI(null); // 실패 UI
                         }
                     }
                 });
     }
 
-    private void startLoginActivity() {
-        this.
-        Intent intent = new Intent(this.LoginActivity.class);
-        startActivity(intent);
-    }
-
+//    private void startLoginActivity() {
+//        Intent intent = new Intent(this.LoginActivity.class);
+//        startActivity(intent);
+//    }
 }
