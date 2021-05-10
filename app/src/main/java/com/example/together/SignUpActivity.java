@@ -20,7 +20,7 @@ import java.util.regex.Pattern;
 
 public class SignUpActivity extends AppCompatActivity {
 
-    private static final String TAG = "signUp";
+    private static final String TAG = "SignUpActivity";
     private FirebaseAuth mAuth;
 
 
@@ -40,7 +40,7 @@ public class SignUpActivity extends AppCompatActivity {
                 case R.id.regBtn:
                     Log.d(TAG,"pressed button");
                     createAuthUser();
-                    //startLoginActivity();
+                    startLoginActivity();
                     break;
                 case R.id.gpsBtn:
                     break;
@@ -82,8 +82,9 @@ public class SignUpActivity extends AppCompatActivity {
                 });
     }
 
-//    private void startLoginActivity() {
-//        Intent intent = new Intent(this.LoginActivity.class);
-//        startActivity(intent);
-//    }
+    private void startLoginActivity() {
+        Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }
