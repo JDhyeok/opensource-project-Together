@@ -2,6 +2,7 @@ package com.example.together;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -26,6 +27,11 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mAuth = FirebaseAuth.getInstance();
+        // Session으로 확인
+//        if(mAuth.getCurrentUser() != null){
+//            finish();
+//            startHomeActivity();
+//        }
 
         setContentView(R.layout.activity_login);// UI view
         findViewById(R.id.signUpBtn).setOnClickListener(onClickListener);
@@ -39,9 +45,6 @@ public class LoginActivity extends AppCompatActivity {
             switch(v.getId()){
                 case R.id.loginBtn:
                     authLogin();
-                    if(user != null){
-                        startHomeActivity();
-                    }
                     break;
                 case R.id.signUpBtn:
                     startSignUpActivity();
@@ -54,6 +57,16 @@ public class LoginActivity extends AppCompatActivity {
     private void authLogin() {
         String email = ((EditText)findViewById(R.id.userID)).getText().toString();
         String password = ((EditText)findViewById(R.id.userPW)).getText().toString();
+
+        if(TextUtils.isEmpty(email)) {
+            Toast.makeText(this, "이메일을 입력해 주세요.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if(TextUtils.isEmpty(password)) {
+            Toast.makeText(this, "비밀번호를 입력해 주세요.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
 
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -71,11 +84,13 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     }
                 });
+
     }
 
     private void startHomeActivity() {
         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
         startActivity(intent);
+        finish();
     }
     private void startSignUpActivity() {
         Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
