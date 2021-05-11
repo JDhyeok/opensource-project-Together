@@ -31,6 +31,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mAuth = FirebaseAuth.getInstance();
+
         // Session으로 확인
 //        if(mAuth.getCurrentUser() != null){
 //            finish();
@@ -52,7 +53,6 @@ public class LoginActivity extends AppCompatActivity {
                     break;
                 case R.id.signUpBtn:
                     startSignUpActivity();
-                    //회원가입화면 이동
                     break;
             }
         }
