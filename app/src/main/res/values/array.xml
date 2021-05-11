@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ott">
+        <item>넷플릭스</item>
+        <item>왓챠</item>
+        <item>TVING</item>
+        <item>WAVVE</item>
+        <item>Disney+</item>
+        <item>HBOmax</item>
+    </string-array>
+</resources>

@@ -3,12 +3,14 @@ package com.example.together.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.example.together.R;
 import com.example.together.models.User;
@@ -26,6 +28,7 @@ public class SignUpActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseDatabase mDatabase;
     private DatabaseReference mRef;
+    private Toolbar mToolbar;
 
 
     @Override
@@ -38,6 +41,12 @@ public class SignUpActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_signup);// UI view
         findViewById(R.id.regBtn).setOnClickListener(onClickListener);
+        mToolbar = (Toolbar)findViewById(R.id.header);
+
+
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     View.OnClickListener onClickListener = new View.OnClickListener() {
@@ -53,15 +62,16 @@ public class SignUpActivity extends AppCompatActivity {
     };
 
     @Override
-    public void onStart() {
-        super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-
-        if(currentUser != null){
-            //reload();
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:{ //toolbar의 back키 눌렀을 때 동작
+                finish();
+                return true;
+            }
         }
+        return super.onOptionsItemSelected(item);
     }
+
 
     private void createAuthUser() {
         FirebaseUser user = mAuth.getCurrentUser();
@@ -69,7 +79,7 @@ public class SignUpActivity extends AppCompatActivity {
         String email = ((EditText)findViewById(R.id.userID)).getText().toString();
         String password = ((EditText)findViewById(R.id.userPW)).getText().toString();
 //        String preference = ((EditText)findViewById(R.id.userPW)).getText().toString();
-        String preference = "Netfilx";
+        String preference = "Netfilx"; // 임시
         User userData = new User(email, username, preference);
 
         mAuth.createUserWithEmailAndPassword(email, password)
@@ -80,7 +90,6 @@ public class SignUpActivity extends AppCompatActivity {
 
                             Log.d(TAG, "createUserWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-//                            mRef.child(user.getUid()).setValue(userData);
                             Toast.makeText(getApplicationContext(),"회원가입 완료",Toast.LENGTH_LONG).show();
 
                         } else {
