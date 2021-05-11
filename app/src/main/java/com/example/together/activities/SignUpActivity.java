@@ -45,6 +45,7 @@ public class SignUpActivity extends AppCompatActivity {
 
 
         setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
