@@ -35,13 +35,13 @@ public class PostActivity extends AppCompatActivity{
         public void onClick(View v) {
             switch(v.getId()){
                 case R.id.check:
-                    writepost();
+                    writePost();
                     break;
             }
         }
     };
 
-    private  void writepost(){ //게시글 작성
+    private  void writePost(){ //게시글 작성
         final String title = ((EditText) findViewById(R.id.titleEditText)).getText().toString(); //제목 text 상자
         final String content = ((EditText) findViewById(R.id.contentEditText)).getText().toString();//내용 text 상자
         if(title.length() > 0 && content.length() > 0){
