@@ -31,6 +31,18 @@
             app:layout_constraintTop_toTopOf="parent"></TextView>
     </androidx.appcompat.widget.Toolbar>
 
+    <ImageButton
+        android:id="@+id/arrow"
+        android:layout_width="73dp"
+        android:layout_height="60dp"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/arrow"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-1dp" />
+
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
@@ -198,7 +210,7 @@
         android:spinnerMode="dropdown"
         android:theme="@style/SpinnerFont"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.546"
+        app:layout_constraintHorizontal_bias="0.558"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/userNickname" />
 
@@ -207,13 +219,13 @@
         android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:background="@drawable/button_shape"
         android:fontFamily="@font/dohyeon"
         android:text="완료"
         android:textSize="17sp"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/black"
         app:layout_constraintTop_toBottomOf="@+id/selOTT" />
 
 
