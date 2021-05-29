@@ -28,7 +28,9 @@
             android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"></TextView>
+            app:layout_constraintTop_toTopOf="parent">
+
+        </TextView>
     </androidx.appcompat.widget.Toolbar>
 
     <TextView
@@ -98,11 +100,11 @@
         android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
-        android:background="@drawable/button_shape"
         android:text="로그인"
         android:textSize="17sp"
         android:textColor="@color/white"
         android:fontFamily="@font/dohyeon"
+        android:background="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -113,12 +115,12 @@
         android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:background="@drawable/button_shape"
         android:text="회원가입"
         android:textSize="17sp"
         android:textColor="@color/white"
         android:fontFamily="@font/dohyeon"
         app:layout_constraintEnd_toEndOf="@+id/loginBtn"
+        android:background="@color/black"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/loginBtn"
         app:layout_constraintTop_toBottomOf="@+id/loginBtn" />

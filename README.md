@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+# opensource-project-Together
+충북대학교 오픈소스 전문 프로젝트 팀 Together 과제물
+
+넷플릭스, 티빙, 웨이브 등 OTT서비스 요금을 파티원과 N페이하여 가성비좋게 이용하자!
+=======
 # 🙋🏻‍♂Together
 
 OTT서비스를 가성비 좋게 이용할 최고의 앱 Together
@@ -13,3 +19,4 @@ OTT서비스를 가성비 좋게 이용할 최고의 앱 Together
 ## 사용 기술
 <img alt="Android" src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" /> <img alt="Firebase" src="https://img.shields.io/badge/firebase-%23039BE5.svg?&style=for-the-badge&logo=firebase"/>
 
+>>>>>>> main
