@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="wavve" type="id" />
+    <item name="netflix" type="id" />
+    <item name="watcha" type="id" />
+    <item name="tving" type="id" />
+    <item name="disney" type="id" />
+    <item name="img5_name" type="id" />
+    <item name="hbomax" type="id" />
+    <item name="img6_name" type="id" />
+    <item name="chat" type="id" />
+    <item name="more" type="id" />
+</resources>

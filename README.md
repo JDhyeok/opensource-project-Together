@@ -1,6 +1,6 @@
 # 🙋🏻‍♂Together
 
-- 
+OTT서비스를 가성비 좋게 이용할 최고의 앱 Together
 
 ## 팀 구성
 | **이름** | **학번** |
@@ -12,4 +12,3 @@
 
 ## 사용 기술
 <img alt="Android" src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" /> <img alt="Firebase" src="https://img.shields.io/badge/firebase-%23039BE5.svg?&style=for-the-badge&logo=firebase"/>
-
