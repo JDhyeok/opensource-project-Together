@@ -27,20 +27,30 @@ public class ChatRoomActivity extends AppCompatActivity {
     private static final String TAG = "ChatRoomActivity";
     private FirebaseAuth mAuth;
     private FirebaseUser user;
+    private Toolbar mToolbar;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_bbs_detail);// UI view
+        setContentView(R.layout.activity_chat_room);// UI view
+        findViewById(R.id.arrow).setOnClickListener(onClickListener);
+
+        mToolbar = (Toolbar)findViewById(R.id.header);
+
+
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case android.R.id.home:{ //toolbar의 back키 눌렀을 때 동작
-                finish();
-                return true;
+    View.OnClickListener onClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v){
+            switch(v.getId()){
+                case R.id.arrow:        // 뒤로가기 버튼 누를 시
+                    onBackPressed();
+                    break;
             }
         }
-        return super.onOptionsItemSelected(item);
-    }
+    };
 }

@@ -28,12 +28,20 @@ public class BbsDetailActivity extends AppCompatActivity {
     private static final String TAG = "BbsDetailActivity";
     private FirebaseAuth mAuth;
     private FirebaseUser user;
+    private Toolbar mToolbar;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_bbs_detail);// UI view
         findViewById(R.id.joinBtn).setOnClickListener(onClickListener);
+        findViewById(R.id.arrow).setOnClickListener(onClickListener);
+        mToolbar = (Toolbar)findViewById(R.id.header);
+
+
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     View.OnClickListener onClickListener = new View.OnClickListener() {
@@ -43,19 +51,12 @@ public class BbsDetailActivity extends AppCompatActivity {
                 case R.id.joinBtn:
                     startChatRoomActivity();
                     break;
+                case R.id.arrow:        // 뒤로가기 버튼 누를 시
+                    onBackPressed();
+                    break;
             }
         }
     };
-
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case android.R.id.home:{ //toolbar의 back키 눌렀을 때 동작
-                finish();
-                return true;
-            }
-        }
-        return super.onOptionsItemSelected(item);
-    }
 
     private void startChatRoomActivity(){
         Intent intent = new Intent(BbsDetailActivity.this, ChatRoomActivity.class);
