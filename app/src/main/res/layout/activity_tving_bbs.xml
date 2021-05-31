@@ -70,7 +70,7 @@
         android:background="@drawable/bold"
         android:text="게시글 1"
         android:textColor="#323232"
-        android:textsize="1dp"
+        android:textSize="1dp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="146dp"></Button>
@@ -81,7 +81,7 @@
         android:layout_height="120dp"
         android:background="@drawable/bold"
         android:text="게시글 2"
-        android:textsize="20sp"
+        android:textSize="20sp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="266dp"></Button>
@@ -91,7 +91,7 @@
         android:layout_height="120dp"
         android:background="@drawable/bold"
         android:text="게시글 3"
-        android:textsize="20sp"
+        android:textSize="20sp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="386dp"></Button>
@@ -112,7 +112,7 @@
         android:layout_height="120dp"
         android:background="@drawable/bold"
         android:text="게시글 4"
-        android:textsize="20sp"
+        android:textSize="20sp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="-1dp"
         tools:layout_editor_absoluteY="506dp"></Button>
