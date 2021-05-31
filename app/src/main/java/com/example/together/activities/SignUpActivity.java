@@ -41,6 +41,7 @@ public class SignUpActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_signup);// UI view
         findViewById(R.id.regBtn).setOnClickListener(onClickListener);
+        findViewById(R.id.arrow).setOnClickListener(onClickListener);
         mToolbar = (Toolbar)findViewById(R.id.header);
 
 
@@ -57,20 +58,12 @@ public class SignUpActivity extends AppCompatActivity {
                     createAuthUser();
                     startLoginActivity();
                     break;
+                case R.id.arrow:        // 뒤로가기 버튼 누를 시
+                    onBackPressed();
+                    break;
             }
         }
     };
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case android.R.id.home:{ //toolbar의 back키 눌렀을 때 동작
-                finish();
-                return true;
-            }
-        }
-        return super.onOptionsItemSelected(item);
-    }
 
 
     private void createAuthUser() {
