@@ -79,50 +79,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header"/>
 
-    <Button
-        android:id="@+id/post1"
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:layout_marginTop="36dp"
+        android:layout_height="500dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/bold"
         android:fontFamily="@font/dohyeon"
-        android:text="게시글 1"
-        android:textSize="20sp"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        tools:layout_editor_absoluteX="0dp"></Button>
-
-    <Button
-        android:id="@+id/post2"
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:background="@drawable/bold"
-        android:fontFamily="@font/dohyeon"
-        android:text="게시글 2"
-        android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@+id/post1"
-        tools:layout_editor_absoluteX="0dp"></Button>
-
-    <Button
-        android:id="@+id/post3"
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:background="@drawable/bold"
-        android:fontFamily="@font/dohyeon"
-        android:text="게시글 3"
-        android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@+id/post2"
-        tools:layout_editor_absoluteX="0dp"></Button>
-
-    <Button
-        android:id="@+id/post4"
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:background="@drawable/bold"
-        android:fontFamily="@font/dohyeon"
-        android:text="게시글 4"
-        android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@+id/post3"
-        tools:layout_editor_absoluteX="-1dp"></Button>
+        tools:layout_editor_absoluteX="0dp" />
 
     <TextView
         android:id="@+id/textView5"

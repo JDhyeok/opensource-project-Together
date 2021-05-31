@@ -29,7 +29,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
     @NonNull
     @Override
     public PostViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.아이템리스트, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list, parent, false);
         PostViewHolder holder = new PostViewHolder(view);
         return holder;
     }
@@ -37,7 +37,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
     @Override
     public void onBindViewHolder(@NonNull PostViewHolder holder, int position) {
         holder.title.setText(postList.get(position).getTitle());
-        holder.title.setText(postList.get(position).getContent());
+        holder.content.setText(postList.get(position).getContent());
     }
 
     @Override
@@ -51,8 +51,8 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
 
         public PostViewHolder(@NonNull View postView) {
             super(postView);
-            this.title = itemView.findViewById(R.id.타이틀아이디);
-            this.content = itemView.findViewById(R.id.내용아이디);
+            this.title = itemView.findViewById(R.id.titleTextView);
+            this.content = itemView.findViewById(R.id.contentTextView);
         }
     }
 }

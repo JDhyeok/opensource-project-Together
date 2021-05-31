@@ -6,7 +6,7 @@ public class Post {
     private String content; // 게시내용
     private String writer; // 작성자
     private String createdAt;
-
+    public Post() {}
     public Post(String UID, String title, String content, String writer){
         this.UID = UID;
         this.title = title;
