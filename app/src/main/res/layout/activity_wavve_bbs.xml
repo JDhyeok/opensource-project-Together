@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="9"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/black"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ToolbarCustom"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/dohyeon"
+            android:text="Together"
+            android:textAlignment="center"
+            android:textColor="#FF3636"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </TextView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageButton
+        android:id="@+id/arrow"
+        android:layout_width="73dp"
+        android:layout_height="60dp"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/arrow"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-1dp" />
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="265dp"
+        android:layout_height="62dp"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/dohyeon"
+        android:text="WAVVE"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="73dp"
+        tools:layout_editor_absoluteY="84dp" />
+
+    <Button
+        android:id="@+id/chat_1"
+        android:layout_width="413dp"
+        android:layout_height="120dp"
+        android:background="@drawable/bold"
+        android:text="게시글 1"
+        android:textColor="#323232"
+        android:textSize="1dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="146dp"></Button>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="413dp"
+        android:layout_height="120dp"
+        android:background="@drawable/bold"
+        android:text="게시글 2"
+        android:textSize="20sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="266dp"></Button>
+
+    <Button
+        android:layout_width="413dp"
+        android:layout_height="120dp"
+        android:background="@drawable/bold"
+        android:text="게시글 3"
+        android:textSize="20sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="386dp"></Button>
+
+    <!--<TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="0.1"
+        android:background="#A4A4A4"
+        android:textSize="1px"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="630dp"
+        tools:ignore="MissingConstraints" />-->
+
+    <Button
+        android:layout_width="413dp"
+        android:layout_height="120dp"
+        android:background="@drawable/bold"
+        android:text="게시글 4"
+        android:textSize="20sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="506dp"></Button>
+
+    <ImageButton
+        android:id="@+id/home"
+        android:layout_width="66dp"
+        android:layout_height="60dp"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/home"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="649dp" />
+
+    <ImageButton
+        android:id="@+id/chat"
+        android:layout_width="63dp"
+        android:layout_height="60dp"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/chat"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="178dp"
+        tools:layout_editor_absoluteY="649dp" />
+
+    <ImageButton
+        android:id="@+id/more"
+        android:layout_width="55dp"
+        android:layout_height="59dp"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/more"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="335dp"
+        tools:layout_editor_absoluteY="648dp" />
+
+    <ImageButton
+        android:id="@+id/postbtn"
+        android:layout_width="54dp"
+        android:layout_height="56dp"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/postbtn"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="335dp"
+        tools:layout_editor_absoluteY="76dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
