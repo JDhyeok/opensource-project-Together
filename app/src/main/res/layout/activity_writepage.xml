@@ -87,6 +87,7 @@
         tools:layout_editor_absoluteY="298dp" />
 
     <EditText
+        android:id="@+id/conentEditText"
         android:layout_width="303dp"
         android:layout_height="214dp"
         android:background="@android:drawable/edit_text"
@@ -96,6 +97,7 @@
         tools:layout_editor_absoluteY="342dp" />
 
     <EditText
+        android:id="@+id/titleEditText"
         android:layout_width="298dp"
         android:layout_height="64dp"
         android:background="@android:drawable/edit_text"
@@ -105,7 +107,7 @@
         tools:layout_editor_absoluteY="215dp" />
 
     <Button
-        android:id="@+id/loginBtn"
+        android:id="@+id/regist"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:background="@color/black"
