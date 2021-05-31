@@ -73,7 +73,7 @@
         tools:layout_editor_absoluteY="245dp" />
 
     <Button
-        android:id="@+id/loginBtn"
+        android:id="@+id/joinBtn"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:background="@color/black"
