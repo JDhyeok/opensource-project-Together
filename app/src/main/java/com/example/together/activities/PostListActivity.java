@@ -27,7 +27,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PostListActivity extends AppCompatActivity {
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "PostListActivity";
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
@@ -45,8 +45,10 @@ public class PostListActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance();
         mRef = mDatabase.getReference("posts");
+        setContentView(R.layout.activity_netflix_bbs);
 
-        recyclerView.setHasFixedSize(true);
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+//        recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         postList = new ArrayList<>();
@@ -58,7 +60,7 @@ public class PostListActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 postList.clear();
                 for(DataSnapshot snap : snapshot.getChildren()) {
-
+                    Log.e(TAG, "success database");
                     Post post = snap.getValue(Post.class);
                     postList.add(post);
                 }

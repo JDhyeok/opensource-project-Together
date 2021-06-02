@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         netflix.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(MainActivity.this, NetflixbbsActivity.class);
+                Intent intent=new Intent(MainActivity.this, PostListActivity.class);
                 startActivity(intent);
             }
         });
