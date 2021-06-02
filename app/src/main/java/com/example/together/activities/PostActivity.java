@@ -77,8 +77,10 @@ public class PostActivity extends AppCompatActivity{
     private void createPost(Post post) {
         // DB upload
         // post id는 갯수로 구분
-        int postid = getPostCount();
-        mRef.child(Integer.toString(postid)).setValue(post);
+//        int postid = getPostCount();
+//        mRef.child(Integer.toString(postid)).setValue(post);
+
+        mRef.push().setValue(post);
     }
 
     public int getPostCount() {
@@ -139,6 +141,6 @@ public class PostActivity extends AppCompatActivity{
         });
 
 
-        return posts.getWriter().toString();
+        return "";
     }
 }
