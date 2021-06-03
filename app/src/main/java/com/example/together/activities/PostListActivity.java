@@ -1,7 +1,9 @@
 package com.example.together.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -38,6 +40,8 @@ public class PostListActivity extends AppCompatActivity {
     private DatabaseReference mRef;
     private Toolbar mToolbar;
 
+    public static PostListActivity closePostList;   // For finish previous PostListActivity after post
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -46,6 +50,9 @@ public class PostListActivity extends AppCompatActivity {
         mDatabase = FirebaseDatabase.getInstance();
         mRef = mDatabase.getReference("posts");
         setContentView(R.layout.activity_netflix_bbs);
+
+        closePostList=PostListActivity.this;    // For finish previous PostListActivity after post
+
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
 //        recyclerView.setHasFixedSize(true);
@@ -76,7 +83,27 @@ public class PostListActivity extends AppCompatActivity {
         adapter = new PostAdapter(postList, this);
         recyclerView.setAdapter(adapter);
 
+        findViewById(R.id.postBtn).setOnClickListener(onClickListener); //게시글 작성 버튼 아이디
+        findViewById(R.id.arrow).setOnClickListener(onClickListener);  //뒤로가기 버튼 아이디
     }
 
+    View.OnClickListener onClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v){
+            switch(v.getId()){
+                case R.id.postBtn:
+                    startPostActivity();
+                    break;
+                case R.id.arrow:        // 뒤로가기 버튼 누를 시
+                    onBackPressed();
+                    break;
+            }
+        }
+    };
+
+    private void startPostActivity() {
+        Intent intent = new Intent(PostListActivity.this, PostActivity.class);
+        startActivity(intent);
+    }
 
 }
