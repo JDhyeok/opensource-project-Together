@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.Together">
-        <activity android:name=".activities.LoginActivity">
+        <!-- chat기능 확인후 적절한 수정이 필요함 -->
+       <!-- <activity android:name=".activities.LoginActivity" android:theme="@style/AppTheme.NoActionbar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,6 +22,15 @@
         <activity android:name=".activities.SignUpActivity"></activity>
         <activity android:name=".activities.MainActivity"></activity>
         <activity android:name=".activities.PostActivity"></activity>
+        <activity android:name=".activities.ChatActivity"></activity>-->
+        <activity android:name=".activities.test" android:theme="@style/AppTheme.NoActionbar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.ChatActivity" android:theme="@style/Theme.AppCompat"></activity>
     </application>
 
 </manifest>
