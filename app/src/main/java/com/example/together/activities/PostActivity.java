@@ -1,5 +1,6 @@
 package com.example.together.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -36,14 +37,15 @@ public class PostActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_writepage); //게시글 레이아웃 아이디
+        setContentView(R.layout.activity_post); //게시글 레이아웃 아이디
         user = FirebaseAuth.getInstance().getCurrentUser();
         mDatabase = FirebaseDatabase.getInstance();
         mRef = mDatabase.getReference("posts");
 
 
 
-        findViewById(R.id.regist).setOnClickListener(onClickListener); //게시글 작성 버튼 아이디
+        findViewById(R.id.regBtn).setOnClickListener(onClickListener); //게시글 작성 버튼 아이디
+        findViewById(R.id.arrow).setOnClickListener(onClickListener);  //뒤로가기 버튼 아이디
         //findViewById(R.id.cancel).setOnClickListener(); //게시글 취소 버튼 아이디
     }
 
@@ -51,8 +53,11 @@ public class PostActivity extends AppCompatActivity{
         @Override
         public void onClick(View v) {
             switch(v.getId()){
-                case R.id.regist:
+                case R.id.regBtn:
                     writePost();
+                    break;
+                case R.id.arrow:        // 뒤로가기 버튼 누를 시
+                    onBackPressed();
                     break;
             }
         }
@@ -81,6 +86,7 @@ public class PostActivity extends AppCompatActivity{
 //        mRef.child(Integer.toString(postid)).setValue(post);
 
         mRef.push().setValue(post);
+        startPostListActivity();
     }
 
     public int getPostCount() {
@@ -142,5 +148,15 @@ public class PostActivity extends AppCompatActivity{
 
 
         return "";
+    }
+
+    private void startPostListActivity() {
+        // finish previous PostListActivity after post
+        PostListActivity closePL=(PostListActivity) PostListActivity.closePostList;
+        closePL.finish();
+
+        Intent intent = new Intent(PostActivity.this, PostListActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

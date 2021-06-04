@@ -48,28 +48,28 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="-1dp" />
 
+
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
         android:fontFamily="@font/dohyeon"
         android:text="NETFLIX"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toStartOf="@+id/postbtn"
-        app:layout_constraintHorizontal_bias="0.685"
+        android:textSize="35sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/header" />
 
     <ImageButton
-        android:id="@+id/postbtn"
+        android:id="@+id/postBtn"
         android:layout_width="45dp"
         android:layout_height="45dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:adjustViewBounds="true"
@@ -77,15 +77,17 @@
         android:scaleType="fitXY"
         android:src="@drawable/postbtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header"/>
-
+        app:layout_constraintHorizontal_bias="0.993"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:layout_marginTop="28dp"
+        android:layout_height="480dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/bold"
+        android:backgroundTint="#F4F3F3"
         android:fontFamily="@font/dohyeon"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
         tools:layout_editor_absoluteX="0dp" />

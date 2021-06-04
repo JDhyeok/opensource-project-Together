@@ -39,7 +39,7 @@
         android:layout_height="113dp"
         android:layout_marginStart="76dp"
         android:layout_marginLeft="76dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="76dp"
         android:adjustViewBounds="true"
         android:background="@null"
         android:scaleType="fitXY"
