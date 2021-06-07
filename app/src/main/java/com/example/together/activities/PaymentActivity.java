@@ -45,6 +45,7 @@ public class PaymentActivity extends AppCompatActivity {
     }
 
 
+
     public void doPayment(){
         // 결제호출
         BootUser bootUser = new BootUser().setPhone("010-1234-5678");

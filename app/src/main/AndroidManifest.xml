@@ -23,6 +23,8 @@
         <activity android:name=".activities.HomeActivity"></activity>
         <activity android:name=".activities.PostActivity"></activity>
         <activity android:name=".activities.PostListActivity"></activity>
+        <activity android:name=".activities.BbsDetailActivity"></activity>
+        <activity android:name=".activities.PaymentActivity"></activity>
 
     </application>
 

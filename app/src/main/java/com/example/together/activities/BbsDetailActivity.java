@@ -73,7 +73,7 @@ public class BbsDetailActivity extends AppCompatActivity {
         public void onClick(View v){
             switch(v.getId()){
                 case R.id.joinBtn:
-                    startChatRoomActivity();
+                    startPaymentActivity();
                     break;
                 case R.id.arrow:        // 뒤로가기 버튼 누를 시
                     onBackPressed();
@@ -82,8 +82,8 @@ public class BbsDetailActivity extends AppCompatActivity {
         }
     };
 
-    private void startChatRoomActivity(){
-        Intent intent = new Intent(BbsDetailActivity.this, ChatRoomActivity.class);
+    private void startPaymentActivity(){
+        Intent intent = new Intent(BbsDetailActivity.this, PaymentActivity.class);
         startActivity(intent);
     }
 }
