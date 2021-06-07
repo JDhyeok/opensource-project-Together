@@ -33,36 +33,31 @@
         </TextView>
     </androidx.appcompat.widget.Toolbar>
 
-    <TextView
-        android:id="@+id/textView31"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="12dp"
-        android:fontFamily="@font/dohyeon"
-        android:text="Email"
-        android:textAlignment="center"
-        android:textColor="#8D8D8D"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/userID"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/userID" />
-
     <EditText
         android:id="@+id/userID"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="100dp"
         android:inputType="textEmailAddress"
-        android:theme="@style/SpinnerFont"
         android:text=""
+        android:theme="@style/SpinnerFont"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.554"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    <EditText
+        android:id="@+id/userPW"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/userID"
+        app:layout_constraintTop_toBottomOf="@+id/userID" />
 
     <TextView
         android:id="@+id/textView2"
@@ -78,33 +73,37 @@
         android:textColor="#8D8D8D"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/textView31"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/userPW" />
 
-    <EditText
-        android:id="@+id/userPW"
-        android:layout_width="220dp"
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginRight="36dp"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintStart_toStartOf="@+id/userID"
-        app:layout_constraintTop_toBottomOf="@+id/userID" />
+        android:layout_gravity="center"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/dohyeon"
+        android:text="Email"
+        android:textAlignment="center"
+        android:textColor="#8D8D8D"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/userID"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/userID" />
 
     <Button
         android:id="@+id/loginBtn"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:text="로그인"
-        android:textSize="17sp"
-        android:textColor="@color/white"
-        android:fontFamily="@font/dohyeon"
+        android:layout_marginTop="48dp"
         android:background="@color/black"
+        android:fontFamily="@font/dohyeon"
+        android:text="로그인"
+        android:textColor="@color/white"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -114,13 +113,13 @@
         android:id="@+id/signUpBtn"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="회원가입"
-        android:textSize="17sp"
-        android:textColor="@color/white"
-        android:fontFamily="@font/dohyeon"
-        app:layout_constraintEnd_toEndOf="@+id/loginBtn"
+        android:layout_marginTop="28dp"
         android:background="@color/black"
+        android:fontFamily="@font/dohyeon"
+        android:text="회원가입"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@+id/loginBtn"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/loginBtn"
         app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
@@ -130,14 +129,15 @@
         android:layout_width="wrap_content"
         android:layout_height="122dp"
         android:layout_marginTop="75dp"
+        android:fontFamily="@font/dohyeon"
         android:text="Developed by"
         android:textColor="@color/black"
         android:textSize="25sp"
-        android:fontFamily="@font/dohyeon"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signUpBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/signUpBtn"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView4"
