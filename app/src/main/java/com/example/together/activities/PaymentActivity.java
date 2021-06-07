@@ -32,10 +32,10 @@ public class PaymentActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pay);
+        setContentView(R.layout.activity_pay_check);
 
         BootpayAnalytics.init(this, "60be3201d8c1bd00202bbed7");
-        Button btn = findViewById(R.id.loginBtn);
+        Button btn = findViewById(R.id.payBtn);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
