@@ -125,62 +125,6 @@
         app:layout_constraintTop_toBottomOf="@+id/post3"
         tools:layout_editor_absoluteX="-1dp"></Button>
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="84dp"
-        android:layout_weight="0.1"
-        android:background="#A4A4A4"
-        android:orientation="vertical"
-        android:textSize="1px"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/postContent"
-        app:layout_constraintVertical_bias="0.684"
-        tools:layout_editor_absoluteX="0dp" />
 
-    <ImageButton
-        android:id="@+id/home"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:adjustViewBounds="true"
-        android:background="@null"
-        android:scaleType="fitXY"
-        android:src="@drawable/home"
-        app:layout_constraintEnd_toStartOf="@+id/chat"
-        app:layout_constraintHorizontal_bias="0.268"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/chat" />
-
-    <ImageButton
-        android:id="@+id/chat"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="18dp"
-        android:adjustViewBounds="true"
-        android:background="@null"
-        android:scaleType="fitXY"
-        android:src="@drawable/chat"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ImageButton
-        android:id="@+id/more"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="88dp"
-        android:layout_marginLeft="88dp"
-        android:adjustViewBounds="true"
-        android:background="@null"
-        android:scaleType="fitXY"
-        android:src="@drawable/more"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.34"
-        app:layout_constraintStart_toEndOf="@+id/chat"
-        app:layout_constraintTop_toTopOf="@+id/chat" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
